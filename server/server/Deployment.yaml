@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pji-grupo1-sever
+  labels:
+    app: pji-grupo1-sever
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pji-grupo1-sever
+    spec:
+      containers:
+      - name: pji-grupo1-sever
+        image: souzagaabriel/pji_grupo1-sever
+        ports:
+        - name: ssh
+          containerPort: 22
+        volumeMounts:
+        - name: pji-grupo1-codigo
+          mountPath: /opt
+        - name: ssh-authorized-keys
+          mountPath: /root/.ssh/authorized_keys
+          subPath: authorized_keys
+      volumes:
+      - name: pji-grupo1-codigo
+        persistentVolumeClaim:
+            claimName: pji-grupo1-codigo
+      - name: ssh-authorized-keys
+        configMap:
+          name: ssh-authorized-keys
