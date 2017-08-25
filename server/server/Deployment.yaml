@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: pji-grupo1-sever
+  name: pji-grupo1-server
   labels:
-    app: pji-grupo1-sever
+    app: pji-grupo1-server
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: pji-grupo1-sever
+        app: pji-grupo1-server
     spec:
       containers:
-      - name: pji-grupo1-sever
-        image: souzagaabriel/pji_grupo1-sever
+      - name: pji-grupo1-server
+        image: souzagaabriel/pji_grupo1-server
         ports:
         - name: ssh
           containerPort: 22

@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pji-grupo1-sever
+  name: pji-grupo1-server
   labels:
-    app: pji-grupo1-sever
+    app: pji-grupo1-server
 spec:
 spec:
   externalIPs:
@@ -18,5 +18,5 @@ spec:
       protocol: TCP
       targetPort: 22
   selector:
-    app: pji-grupo1-sever
+    app: pji-grupo1-server
   type: LoadBalancer
