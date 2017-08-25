@@ -9,7 +9,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir /var/run/sshd
+RUN mkdir /var/run/sshd && \
+    mkdir /root/.ssh
 
 # Based on:
 # https://docs.docker.com/engine/examples/running_ssh_service/
