@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get -y -q upgrade && \
-    apt-get -y -q install curl openssh-server && \
+    apt-get -y -q install python python-mysql.connector python-flask curl openssh-server && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
