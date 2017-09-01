@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
   nfs:
     server: storage1
-    path: /mnt/storage/storage/kubernetes/ifsc/sje/a/saas/srv/alunos/pji_grupo1/codigo
+    path: /mnt/storage/storage/kubernetes/ifsc/sje/a/saas/srv/ensino/pji_grupo1/codigo
