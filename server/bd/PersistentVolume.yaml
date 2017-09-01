@@ -2,6 +2,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: pji-grupo1-mariadb
+  labels:
+    namespace: ensino
 spec:
   capacity:
     storage: 300Mi

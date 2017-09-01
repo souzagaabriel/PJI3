@@ -2,8 +2,9 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pji-grupo1-codigo
+  namespace: ensino
   labels:
-    app: pji-grupo1-codigo
+    namespace: ensino
 spec:
   accessModes:
     - ReadWriteOnce

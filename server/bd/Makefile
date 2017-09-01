@@ -8,4 +8,4 @@ delete:
 create:
 	kubectl create -f PersistentVolume.yaml
 	kubectl create -f PersistentVolumeClaim.yaml
-	helm install --name pji-grupo1 -f values.yaml stable/mariadb
+	helm install --name pji-grupo1 --namespace ensino -f values.yaml stable/mariadb

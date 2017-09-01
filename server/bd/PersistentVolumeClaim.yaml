@@ -2,8 +2,9 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pji-grupo1-mariadb
+  namespace: ensino
   labels:
-    app: pji-grupo1-mariadb
+    namespace: ensino
 spec:
   accessModes:
   - ReadWriteOnce

@@ -2,6 +2,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: pji-grupo1-codigo
+  labels:
+    namespace: ensino
 spec:
   capacity:
     storage: 50Mi
