@@ -6,6 +6,11 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get -y -q upgrade && \
     apt-get -y -q install python python-mysql.connector mysql-client vim python-flask curl openssh-server && \
+    curl https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py && \
+    rm -rf get-pip.py && \
+    pip install plotly && \
+    pip install pandas && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
