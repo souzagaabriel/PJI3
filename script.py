@@ -2,11 +2,8 @@
        
 import time
 import serial
-<<<<<<< HEAD
 import json
 import requests
-=======
->>>>>>> ca2b0b6e4123442bbfb6bdd095a16d6a217e1e4f
 
 ser = serial.Serial(
         port='/dev/ttyS0',
@@ -18,7 +15,6 @@ ser = serial.Serial(
 )
 counter=0
 while 1:
-<<<<<<< HEAD
 	x = ser.read(size=1)
 
 	if x is not '' :
@@ -29,12 +25,3 @@ while 1:
         headers = {'Content-type': 'application/json'}
         data=json.dumps(data)
         r = requests.post(url, data=data, headers=headers)
-=======
-	#x=binascii.hexlify(ser.read(8))
-       #
-	x = ser.read(size=1) 
-
-	if x is not '' :
-		print bin(int(x.encode("hex"), 16))[2:].zfill(8)
-	
->>>>>>> ca2b0b6e4123442bbfb6bdd095a16d6a217e1e4f
