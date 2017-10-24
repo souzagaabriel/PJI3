@@ -18,6 +18,10 @@ spec:
       port: 2280
       protocol: TCP
       targetPort: 22
+    - name: flask
+      port: 5011
+      protocol: TCP
+      targetPort: 5011
   selector:
     app: pji-grupo1-server
   type: LoadBalancer
